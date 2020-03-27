@@ -1,14 +1,14 @@
 package fr.uvsq21504875;
 
-public class Quit implements Command{
+public class Print implements Command{
 
   private Interpreteur inter;
 
-  public Quit(Interpreteur inter){
+  public Print(Interpreteur inter) {
     this.inter=inter;
   }
 
   public void execute(){
-    this.inter.exit();
+    this.inter.print();
   }
 }
