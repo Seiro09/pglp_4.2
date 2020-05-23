@@ -4,20 +4,39 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class Interpreteur {
-  protected Stack<Double> pileActuelle = new Stack<Double>();
-  protected Stack<Stack> historique = new Stack<Stack>();
-  protected HashMap<String,Command> set = new HashMap<String,Command>();
+  /**
+   * Pile de calcul.
+   */
+  protected Stack<Double> pileActuelle = new Stack<>();
+  /**
+   * Historique des piles pour retour en arrière.
+   */
+  protected Stack<Stack<Double>> historique = new Stack<>();
+  /**
+   * Liste de commandes.
+   */
+  protected HashMap<String, Command> set = new HashMap<>();
 
 
-  public void undo(){
-    this.pileActuelle=this.historique.pop();
+  /**
+   * Fonction pour Undo.
+   */
+  public void undo() {
+    this.pileActuelle = this.historique.pop();
+    System.out.println("Historique : " + this.historique.peek());
   }
 
+  /**
+   * Fonction pour Exit.
+   */
   public void exit() {
     System.exit(0);
   }
 
-  public void print(){
+  /**
+   * Fonction pour Print.
+   */
+  public void print() {
     System.out.println(this.pileActuelle);
   }
 }

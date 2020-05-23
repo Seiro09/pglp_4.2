@@ -1,14 +1,25 @@
 package fr.uvsq21504875;
 
-public class Quit implements Command{
+public class Quit implements Command {
 
+  /**
+   * Interpreteur.
+   */
   private Interpreteur inter;
 
-  public Quit(Interpreteur inter){
-    this.inter=inter;
+  /**
+   * Constructeur de la commande Quit.
+   *
+   * @param inter
+   */
+  public Quit(final Interpreteur inter) {
+    this.inter = inter;
   }
 
-  public void execute(){
+  /**
+   * Fonction d'exécution de la commande Quit.
+   */
+  public void execute() {
     this.inter.exit();
   }
 }

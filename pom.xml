@@ -22,7 +22,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13-beta-3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -69,6 +69,11 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <plugin>
+          <groupId>com.github.spotbugs</groupId>
+          <artifactId>spotbugs-maven-plugin</artifactId>
+          <version>3.1.12.2</version>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
@@ -81,6 +86,10 @@
         <configuration>
           <configLocation>checkstyle.xml</configLocation>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </reporting>

@@ -1,14 +1,25 @@
 package fr.uvsq21504875;
 
-public class Print implements Command{
+public class Print implements Command {
 
+  /**
+   * Interpreteur.
+   */
   private Interpreteur inter;
 
-  public Print(Interpreteur inter) {
-    this.inter=inter;
+  /**
+   * Constructeur de la classe Print.
+   *
+   * @param inter l'Interpréteur.
+   */
+  public Print(final Interpreteur inter) {
+    this.inter = inter;
   }
 
-  public void execute(){
+  /**
+   * Exécution de la classe Print.
+   */
+  public void execute() {
     this.inter.print();
   }
 }
